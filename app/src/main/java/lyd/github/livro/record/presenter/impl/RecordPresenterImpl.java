@@ -1,12 +1,11 @@
 package lyd.github.livro.record.presenter.impl;
 
-import android.os.Bundle;
+import javax.inject.Inject;
 
+import lyd.github.livro.record.interactor.RecordInteractor;
+import lyd.github.livro.record.model.RecordModel;
 import lyd.github.livro.record.presenter.RecordPresenter;
 import lyd.github.livro.record.view.RecordView;
-import lyd.github.livro.record.interactor.RecordInteractor;
-
-import javax.inject.Inject;
 
 public final class RecordPresenterImpl extends RecordPresenter {
     private final RecordView mView;

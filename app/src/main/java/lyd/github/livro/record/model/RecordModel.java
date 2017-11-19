@@ -1,7 +1,7 @@
 package lyd.github.livro.record.model;
 
-import android.databinding.BaseObservable;
+import lyd.github.livro.base.model.BaseModel;
 
-public class RecordModel extends BaseObservable {
+public class RecordModel extends BaseModel {
 
 }
