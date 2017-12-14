@@ -1,27 +1,25 @@
 package lyd.github.livro.base;
 
 import android.app.Application;
-
-import lyd.github.livro.base.injection.AppComponent;
-import lyd.github.livro.base.injection.AppModule;
-import lyd.github.livro.base.injection.DaggerAppComponent;
+import android.content.Context;
 
 /**
- * Created by shawn on 17/11/18.
+ *
+ * @author shawn
+ * @date 17/12/13
  */
 
-public class BaseApplication extends Application {
+public class BaseApplication extends Application{
 
-    private AppComponent mAppComponent;
+    private static Context appContext;
 
     @Override
     public void onCreate() {
         super.onCreate();
+        appContext = getApplicationContext();
     }
 
-    private void initAppComponent() {
-        mAppComponent = DaggerAppComponent.builder()
-                .appModule(new AppModule(this))
-                .build();
+    public static Context getAppContext() {
+        return appContext;
     }
 }
