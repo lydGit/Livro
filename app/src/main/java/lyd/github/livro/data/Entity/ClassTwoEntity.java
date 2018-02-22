@@ -9,25 +9,29 @@ import lyd.github.livro.data.config.DataFieldConfig;
 import lyd.github.livro.data.config.DataTableConfig;
 
 /**
- *
  * @author shawn
- * @date 17/12/13
- *
- * 一级分类
+ * @date 18/2/21
+ * <p>
+ * 二级分类
  */
-@Entity(tableName = DataTableConfig.CLASS_ONE)
-public class ClassOneEntity {
+
+@Entity(tableName = DataTableConfig.CLASS_TWO)
+public class ClassTwoEntity {
 
     @NonNull
     @PrimaryKey(autoGenerate = true)
-    @ColumnInfo(name = DataFieldConfig.CO_ID)
+    @ColumnInfo(name = DataFieldConfig.CT_ID)
     private int classId;
 
-    @ColumnInfo(name = DataFieldConfig.CO_NAME)
+    @ColumnInfo(name = DataFieldConfig.CT_NAME)
     private String className;
 
-    @ColumnInfo(name = DataFieldConfig.CO_SORT)
+    @ColumnInfo(name = DataFieldConfig.CT_SORT)
     private int sort;
+
+    @NonNull
+    @ColumnInfo(name = DataFieldConfig.CT_CATEGORY_ID)
+    private int categoryId;
 
     @NonNull
     public int getClassId() {
@@ -52,5 +56,14 @@ public class ClassOneEntity {
 
     public void setSort(int sort) {
         this.sort = sort;
+    }
+
+    @NonNull
+    public int getCategoryId() {
+        return categoryId;
+    }
+
+    public void setCategoryId(@NonNull int categoryId) {
+        this.categoryId = categoryId;
     }
 }
