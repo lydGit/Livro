@@ -29,6 +29,11 @@ public class ClassOneEntity {
     @ColumnInfo(name = DataFieldConfig.CO_SORT)
     private int sort;
 
+    public ClassOneEntity(String className, int sort) {
+        this.className = className;
+        this.sort = sort;
+    }
+
     @NonNull
     public int getClassId() {
         return classId;

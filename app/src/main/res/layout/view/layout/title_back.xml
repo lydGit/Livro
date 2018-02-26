@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorTheme"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/iv_common_title_back"
+        android:layout_width="@dimen/title_height"
+        android:layout_height="@dimen/title_height"
+        android:src="@drawable/ics_common_back" />
+
+    <TextView
+        android:id="@+id/tv_common_title_name"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:gravity="center_vertical"
+        android:textColor="@color/colorWhite"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        tools:text="title" />
 
 </LinearLayout>
