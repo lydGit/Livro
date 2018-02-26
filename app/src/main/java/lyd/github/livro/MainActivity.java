@@ -3,7 +3,7 @@ package lyd.github.livro;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-import lyd.github.livro.data.AppDataBase;
+import lyd.github.livro.label.ClassOneActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -12,6 +12,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        AppDataBase dataBase = AppDataBase.getInstance();
+        ClassOneActivity.startActivity(this);
     }
 }
