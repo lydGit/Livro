@@ -32,6 +32,11 @@ public abstract class BaseTitleActivity extends BaseActivity {
 
     public abstract void init();
 
+    /**
+     * 初始ViewModel
+     */
+    public abstract void initViewModel();
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,6 +47,7 @@ public abstract class BaseTitleActivity extends BaseActivity {
         tvCommonTitleName.setText(getTitleName());
         //初始数据
         init();
+        initViewModel();
     }
 
     /**
@@ -57,6 +63,8 @@ public abstract class BaseTitleActivity extends BaseActivity {
             contentParent.getChildAt(0).setFitsSystemWindows(true);
         }
     }
+
+
 
     @OnClick(R.id.iv_common_title_back)
     public void back() {

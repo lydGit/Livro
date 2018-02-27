@@ -15,11 +15,23 @@
 
     <TextView
         android:id="@+id/tv_common_title_name"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="@dimen/title_height"
+        android:layout_weight="1"
         android:gravity="center_vertical"
         android:textColor="@color/colorWhite"
         android:textSize="22sp"
         tools:text="title" />
+
+    <TextView
+        android:id="@+id/tv_common_title_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        tools:text="编辑" />
 
 </LinearLayout>
